@@ -163,7 +163,7 @@ if __name__ == '__main__':
     model = predict_model(X_train, y_train)
     y_predict = model.predict(X_test)
     print(calc_error(y_predict, y_test))
-
+    
     final_predict = model.predict(test_df)
     final_df = pd.DataFrame({ 'id':test_id,'happiness':final_predict})
-    final_df.to_csv('happiness.csv',sep=',',columns=['id','happiness'],index=False)
+    final_df.to_csv('happiness_submit.csv',sep=',',columns=['id','happiness'],index=False)
